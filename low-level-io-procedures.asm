@@ -1,10 +1,8 @@
-TITLE Designing low-level I/O procedures     (Proj6_ngolamr.asm)
+TITLE Low-Level I/O Procedures     (low-level-io-procedures.asm)
 
 ; Author: Richard Ngo-Lam
 ; Last Modified: 3/14/2021
-; OSU email address: ngolamr@oregonstate.edu
-; Course number/section:   CS271 Section 400
-; Project Number: 6                 Due Date: 3/14/2021
+; Email address: rngolam@gmail.com
 ; Description: This program will implement macros for string processing in order to validate and convert a user's
 ;	numeric string inputs to integers, calculate the sum and average of the integers, then cast the values back
 ;	to strings and display the results.
@@ -77,7 +75,7 @@ INTEGER_COUNT = 10
 
 
 .data
-programTitle	BYTE	"PROGRAMMING ASSIGNMENT 6: Designing low-level I/O procedures",13,10
+programTitle	BYTE	"Designing Low-Level I/O Procedures",13,10
 				BYTE	"Written by: Richard Ngo-Lam",13,10,0
 description		BYTE	"Please provide 10 signed decimal integers.",13,10
 				BYTE	"Each number needs to be small enough to fit inside a 32 bit register. "
@@ -107,8 +105,6 @@ period			BYTE	2Eh,0
 
 validInputCount	DWORD	1
 
-extraCredit1	BYTE	"**EC: Numbers each line of user input and displays a running subtotal of the user's valid numbers.",13,10,0
-
 
 .code
 main PROC
@@ -122,8 +118,6 @@ _introduction:
 	mDisplayString OFFSET programTitle
 	CALL	CrLf
 	mDisplayString OFFSET description
-	CALL	CrLf
-	mdisplayString OFFSET extraCredit1
 	CALL	CrLf
 
 
